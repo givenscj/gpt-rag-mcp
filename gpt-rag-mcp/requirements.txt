@@ -1,0 +1,13 @@
+mcp[cli]
+semantic-kernel
+
+azure.appconfiguration
+azure.appconfiguration.provider
+
+tenacity
+uv
+
+fastapi
+fastapi-mcp
+
+uvicorn

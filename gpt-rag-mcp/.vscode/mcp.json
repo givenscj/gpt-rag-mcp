@@ -1,0 +1,26 @@
+{
+    "mcpServers": {
+        "sk": {
+            "command": "uv",
+            "args": [
+                "--directory=${workspaceFolder}/src",
+                "run",
+                "server.py"
+            ],
+            "env": {
+                
+            }
+        },
+        "agent": {
+            "command": "uv",
+            "args": [
+                "--directory=${workspaceFolder}/src",
+                "run",
+                "server.py"
+            ],
+            "env": {
+                
+            }
+        }
+    }
+}
