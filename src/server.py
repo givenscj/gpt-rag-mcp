@@ -66,7 +66,7 @@ logger = logging.getLogger(__name__)  # Use a module-specific logger
 from configuration import Configuration
 config = Configuration()
 
-mcp_port = config.get_value("MCP_PORT", default=5000)
+mcp_port = int(config.get_value("MCP_PORT", default=5000))
 
 deployment_name = config.get_value("AZURE_OPENAI_DEPLOYMENT_NAME", default="chat")
 api_version = config.get_value("AZURE_OPENAI_API_VERSION")
