@@ -112,5 +112,7 @@ routes = [
 ]
 
 # Create and run Starlette app
-starlette_app = Starlette(routes=routes)
-uvicorn.run(starlette_app, host="0.0.0.0", port=mcp_port)
+app = Starlette(routes=routes)
+
+#uvicorn.run(app, host="0.0.0.0", port=mcp_port)
+    
