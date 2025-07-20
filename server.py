@@ -310,7 +310,7 @@ elif (mcp_mode == "fastapi" and mcp_transport == "sse"):
             #server = kernel.as_mcp_server(server_name="sk")
             while isinstance(e, Exception) and hasattr(e, 'exceptions') and e.exceptions:
                 e = e.exceptions[0]
-                logging.error(f"Exception details: {e.exceptions[0].exceptions[0]} - {str(e)}")
+                logging.error(f"Exception details: {str(e)}")
 
     async def handle_root(request):
         return PlainTextResponse("Welcome to the GPT RAG MCP Server.")
@@ -360,7 +360,7 @@ elif (mcp_mode == "sse"):
             #server = kernel.as_mcp_server(server_name="sk")
             while isinstance(e, Exception) and hasattr(e, 'exceptions') and e.exceptions:
                 e = e.exceptions[0]
-                logging.error(f"Exception details: {e.exceptions[0].exceptions[0]} - {str(e)}")
+                logging.error(f"Exception details: {str(e)}")
 
     # Define handler functions
     async def handle_sse(request):
@@ -384,7 +384,7 @@ elif (mcp_mode == "sse"):
             #server = kernel.as_mcp_server(server_name="sk")
             while isinstance(e, Exception) and hasattr(e, 'exceptions') and e.exceptions:
                 e = e.exceptions[0]
-                logging.error(f"Exception details: {e.exceptions[0].exceptions[0]} - {str(e)}")
+                logging.error(f"Exception details: {str(e)}")
 
     async def homepage(request: Request):
         return PlainTextResponse("Homepage")
