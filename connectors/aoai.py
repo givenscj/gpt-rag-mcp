@@ -36,8 +36,8 @@ class AzureOpenAIConnector:
         self.frequency_penalty = self.settings.get("frequency_penalty", self.config.get_value('AZURE_OPENAI_FREQUENCY_PENALTY', 0.0))
         self.presence_penalty = self.settings.get("presence_penalty", self.config.get_value('AZURE_OPENAI_PRESENCE_PENALTY', 0.0))
         self.stop = self.settings.get("stop", self.config.get_value('AZURE_OPENAI_STOP', None, allow_none=True))
-        self.max_completion_tokens = self.settings.get("max_completion_tokens", self.config.get_value('AZURE_OPENAI_MAX_TOKENS', 10000))
-        self.stream = self.settings.get("stream", self.config.get_value('AZURE_OPENAI_STREAM', False))
+        self.max_completion_tokens = self.settings.get("max_completion_tokens", self.config.get_value('AZURE_OPENAI_MAX_TOKENS', 10000, type=int))
+        self.stream = self.settings.get("stream", self.config.get_value('AZURE_OPENAI_STREAM', False, type=bool))
 
         token_provider = get_bearer_token_provider(
             self.config.credential, 
